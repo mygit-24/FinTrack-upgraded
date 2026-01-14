@@ -1,0 +1,77 @@
+.nav {
+  display: flex;
+  align-items: center;
+  position: relative; // מאפשר למבורגר להיות מעל ה-nav
+  justify-content: center; // לוגו במרכז
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@include mobile {
+  .menu-toggle {
+    display: block;
+    position: absolute; // יוצא מהזרימה
+    right: 16px; // תמיד בצד ימין
+    top: 50%; 
+    transform: translateY(-50%);
+    z-index: 30;
+  }
+
+  .nav-left {
+    margin: 0 auto; // מוודא שהלוגו במרכז
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 16px; // תמיד מימין
+    background: var(--panel);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.4);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 0.8rem;
+    z-index: 20;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+
+}
+
+
+

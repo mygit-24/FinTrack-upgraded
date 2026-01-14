@@ -1,0 +1,124 @@
+.goal-card {
+  background: color-mix(in srgb, var(--panel), transparent 10%);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.3);
+  overflow: hidden;
+  direction: rtl;
+}
+
+.card-head {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text);
+}
+
+.card-summary {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.chip {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  background: rgba(255,255,255,0.02);
+  padding: 6px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.04);
+  font-size: 13px;
+}
+
+.chip-label {
+  color: var(--muted);
+  font-weight: 600;
+  margin-left: 6px;
+}
+
+.chip-value {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.card-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.expand-toggle {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 6px 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.card-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 300ms ease, opacity 250ms ease;
+  opacity: 0;
+}
+
+.card-details.expanded {
+  max-height: 600px;
+  opacity: 1;
+  margin-top: 12px;
+}
+
+.progress-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.progress-label {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.details-grid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.detail-item {
+  min-width: 120px;
+  flex: 1;
+}
+
+.detail-label {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.detail-value {
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .goal-card { padding: 14px; }
+  .card-summary { justify-content: flex-start; gap: 6px; flex-wrap: wrap; }
+  .chip { padding: 6px 8px; font-size: 12px; }
+  .card-controls { gap: 6px; }
+  .expand-toggle { padding: 6px; font-size: 14px; }
+  .details-grid { flex-direction: column; }
+  .detail-item { min-width: 100%; }
+}

@@ -1,0 +1,34 @@
+// _responsive.scss
+
+// נקודות שבירה
+$breakpoints: (
+  'mobile': 480px,
+  'tablet': 768px,
+  'desktop': 1024px
+);
+
+// Mixin רספונסיבי
+// שימוש: @include respond('mobile') { ...CSS... }
+@mixin respond($device) {
+  $breakpoint: map-get($breakpoints, $device);
+  @if $breakpoint {
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint `#{$device}` לא מוגדר במפה $breakpoints.";
+  }
+}
+
+// דוגמה נוספת: mixin ל-min-width
+// שימוש: @include respond-min('desktop') { ...CSS... }
+@mixin respond-min($device) {
+  $breakpoint: map-get($breakpoints, $device);
+  @if $breakpoint {
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint `#{$device}` לא מוגדר במפה $breakpoints.";
+  }
+}

@@ -1,0 +1,49 @@
+
+.hero {
+  h1 {
+    margin: 0;
+    font-size: clamp(22px, 6vw, 44px);
+    line-height: 1.2;
+  }
+
+  .hero-sub {
+    margin-top: 8px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .hero-cta {
+    margin-top: 12px;
+  }
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card {
+  margin-top: 24px;
+  background: var(--panel);
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.3);
+}
+
+.card-header h3 {
+  margin: 0 0 12px 0;
+}
+
+
+
+.mobile-view {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-view {
+    display: block;
+  }
+}
+

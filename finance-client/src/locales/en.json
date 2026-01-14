@@ -1,0 +1,337 @@
+{
+  "meta": {
+    "title": "My account management"
+  },
+  "home": {
+    "hero": {
+      "title": "Take control of your money in one place",
+      "subtitle": "Track income, expenses and savings in a simple dashboard.",
+      "ctaRegister": "Get started",
+      "ctaLogin": "Already have an account? Log in"
+    },
+       "kpi": {
+      "totalIncome": "Total income",
+      "totalExpense": "Total expenses",
+      "totalSavings": "Total savings",
+      "halfYearAccum": "Accumulated over 6 months",
+      "savingsCaption": "Income minus expenses"
+    }
+  },
+  "auth": {
+    "loginTitle": "Login",
+    "registerTitle": "Welcome! Let's get started",
+    "login": {
+      "subtitle": "Enter your details to manage your personal budget",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Type your email address",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Type your password",
+      "submit": "Log in",
+      "submitting": "Logging in...",
+      "noAccount": "Don't have an account? Sign up",
+      "success": "Logged in successfully!",
+      "invalidCredentials": "Email or password is incorrect",
+      "userNotFound": "User not found",
+      "serverError": "Server error, please try again later"
+    },
+    "register": {
+      "subtitle": "Enter your personal details to get started",
+      "firstNameLabel": "First name",
+      "firstNamePlaceholder": "First name",
+      "lastNameLabel": "Last name",
+      "lastNamePlaceholder": "Last name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Email",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Password",
+      "submit": "Sign up",
+      "submitting": "Signing up...",
+      "haveAccount": "Already have an account? Log in here",
+      "success": "Registration successful!",
+      "emailExists": "This email address already exists",
+      "serverError": "Server error, please try again later"
+    },
+    "messages": {
+      "login": {
+        "success": "Logged in successfully!",
+        "invalidCredentials": "Invalid email or password",
+        "userNotFound": "User not found",
+        "serverError": "Server error, please try again later"
+      },
+       "register": {
+        "success": "Registered successfully!",
+        "emailExists": "This email is already registered",
+        "serverError": "Server error, please try again later"
+      }
+    }
+  
+
+  },
+  "transactions": {
+    "dashboardTitle": "My dashboard",
+    "addNewAction": "+ Add new transaction",
+ 
+       "kpi": {
+      "totalIncome": "Total income",
+      "totalExpense": "Total expenses",
+      "totalSavings": "Total savings",
+      "halfYearAccum": "Accumulated over 6 months",
+      "savingsCaption": "Income minus expenses"
+    },
+    "chartsTitle": "Expenses and income distribution in charts",
+    "form": {
+      "titleEdit": "Edit transaction",
+      "titleCreate": "Add transaction",
+      "typeLabel": "Type",
+      "typeOptions": {
+        "income": "Income",
+        "expense": "Expense"
+      },
+      "typePlaceholder": "Select type",
+      "amountLabel": "Amount",
+      "dateLabel": "Date",
+      "categoryLabel": "Category",
+      "categoryPlaceholder": "Select category",
+      "categoryRequired": "Please choose a category before saving",
+      "submitEdit": "Update",
+      "submitCreate": "Save"
+    },
+    "table": {
+      "title": "All my transactions",
+      "noData": "No data to display",
+      "exportExcel": "Export to Excel",
+      "headers": {
+        "type": "Type",
+        "amount": "Amount",
+        "date": "Date",
+        "category": "Category",
+        "actions": "Actions"
+      },
+      "typeLabel": {
+        "income": "Income",
+        "expense": "Expense"
+      },
+      "filters": {
+        "toggle": "Filters",
+        "typeLabel": "Show only:",
+        "typeAll": "All",
+        "typeIncome": "Income",
+        "typeExpense": "Expenses",
+        "categoryAll": "All expenses"
+      },
+      "actions": {
+        "edit": "Edit",
+        "delete": "Delete"
+      }
+    },
+    "updateModal": {
+      "title": "Update transaction",
+      "dateLabel": "Date:",
+      "sumLabel": "Amount:"
+    }
+  },
+  "charts": {
+    "incomeVsExpenseTitle": "Income vs expenses",
+    "incomeVsExpenseSubtitle": "Your monthly picture",
+    "savingsTrendTitle": "Savings trend",
+    "savingsTrendSubtitle": "How much is left at the end of each month",
+    "incomeLegend": "Income",
+    "expenseLegend": "Expenses",
+    "monthLabel": "Show month:",
+    "monthPlaceholder": "Select month",
+    "expenseByCategoryTitle": "Expenses by category",
+    "noDataForMonth": "No data for {{month}}",
+    "uncategorized": "Uncategorized",
+    "categoriesError": "Error loading categories chart",
+    "transactions": {
+      "loadError": "Error loading transactions",
+      "monthHeader": "Month",
+      "incomeHeader": "Income",
+      "expenseHeader": "Expenses",
+      "pdfTitle": "Monthly report for {{year}}",
+      "excelSheetName": "Monthly summary",
+      "pdfFileName": "monthly_report_{{year}}",
+      "excelFileName": "monthly_report_{{year}}",
+      "yearLabel": "Select year:",
+      "yearPlaceholder": "Select year",
+      "monthlyTitle": "Income and expenses by month ({{year}})",
+      "yearlyTitle": "Yearly summary ({{year}})",
+      "yearlyTotalLabel": "Yearly total",
+      "income": "Income",
+      "expense": "Expenses",
+      "exportExcel": "Export to Excel",
+      "exportPDF": "Export to PDF"
+    }
+  },
+  "months": {
+    "jan": "Jan",
+    "feb": "Feb",
+    "mar": "Mar",
+    "apr": "Apr",
+    "may": "May",
+    "jun": "Jun"
+  },
+  "profile": {
+    "loading": "Loading...",
+    "greeting": "Hello {{firstName}} {{lastName}}",
+    "firstNameLabel": "First name:",
+    "lastNameLabel": "Last name:",
+    "emailLabel": "Email:",
+    "changePasswordTitle": "Change password",
+    "oldPasswordLabel": "Current password:",
+    "newPasswordLabel": "New password:",
+    "confirmPasswordLabel": "Confirm new password:",
+    "submitButton": "Update details",
+    "passwordMismatch": "The new passwords do not match!",
+    "updateSuccess": "Your details have been updated successfully!",
+    "updateError": "Error updating your details"
+  },
+  "validation": {
+    "emailRequired": "Email is required",
+    "emailInvalid": "Invalid email address",
+    "passwordRequired": "Password is required",
+    "passwordMin": "Password must be at least 6 characters",
+    "firstNameRequired": "First name is required",
+    "firstNameMin": "At least two characters",
+    "firstNameHebrewOnly": "Letters only",
+    "lastNameRequired": "Last name is required",
+    "lastNameMin": "At least two characters",
+    "lastNameHebrewOnly": "Letters only"
+  },
+  "autoSaving": {
+    "enable": "Enable automatic saving",
+    "amountLabel": "Amount to save:",
+    "amountPlaceholder": "Enter amount",
+    "frequencyLabel": "Frequency:",
+    "frequencyPlaceholder": "Select frequency",
+    "weekly": "Weekly",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "unlimited": "Unlimited",
+    "limited": "Fixed number of times",
+    "paymentsCountLabel": "Number of payments:"
+  },
+  "datePicker": {
+    "placeholder": "Select date",
+    "months": {
+      "0": "January",
+      "1": "February",
+      "2": "March",
+      "3": "April",
+      "4": "May",
+      "5": "June",
+      "6": "July",
+      "7": "August",
+      "8": "September",
+      "9": "October",
+      "10": "November",
+      "11": "December"
+    },
+    "weekdaysShort": {
+      "sun": "S",
+      "mon": "M",
+      "tue": "T",
+      "wed": "W",
+      "thu": "T",
+      "fri": "F",
+      "sat": "S"
+    }
+  },
+  "financeSelect": {
+    "placeholder": "Choose an option"
+  },
+  "goals": {
+    "section": {
+    "emptyText": "You don't have any saving goals yet. Click to start saving"
+    },
+    "table": {
+      "headers": {
+        "name": "Goal name",
+        "targetAmount": "Target (NIS)",
+        "autoSaving": "Auto saving",
+        "currentAmount": "Saved (NIS)",
+        "progress": "Progress",
+        "actions": "Actions"
+      },
+      "actions": {
+        "edit": "Edit",
+        "delete": "Delete",
+        "addAmount": "Add amount"
+      },
+      "autoSavingTemplate": "Every {{frequency}} {{amount}}"
+    }
+    },
+
+  "pagination": {
+    "prev": "Previous",
+    "next": "Next",
+    "pageOf": "Page {{page}} of {{total}}"
+  },
+      "card": {
+        "chips": {
+          "target": "Target",
+          "saved": "Saved",
+          "auto": "Auto"
+        },
+        "aria": {
+          "edit": "Edit {{title}}",
+          "delete": "Delete {{title}}",
+          "addAmount": "Add amount to {{title}}"
+        }
+      },
+  
+    "form": {
+      "editTitle": "Edit saving goal",
+      "createTitle": "Add new saving goal",
+      "nameLabel": "Goal name",
+      "namePlaceholder": "For example: vacation / new car",
+      "targetAmountLabel": "Target amount",
+      "targetAmountPlaceholder": "For example: 5000",
+      "autoSavingLabel": "Automatic saving to this goal",
+      "saveButton": "Save",
+      "autoSavingError": "Please fill in amount and frequency for automatic saving",
+      "saveError": "Error while saving the goal"
+    },
+    "page": {
+      "title": "Saving goals management",
+      "subtitle": "Here you can track, edit and manage your personal saving goals in an organized and easy way.",
+      "addNewButton": "Add new goal",
+      "loading": "Loading goals...",
+      "errorFallback": "Error loading goals",
+      "listTitle": "Your list",
+      "deleteConfirm": "Are you sure you want to delete this goal?",
+      "deleteError": "Error deleting the goal",
+      "addAmountInvalid": "Please enter a valid amount",
+      "addAmountError": "Error adding amount"
+    },
+  
+  "common": {
+    "cancel": "Cancel",
+    "save": "Save",
+    "loading": "Loading..."
+  },
+  "balance": {
+    "dateLabel": "Calculate balance as of date:",
+    "positiveLabel": "Positive balance:",
+    "negativeLabel": "Negative balance:"
+  },
+  "layout": {
+    "nav": {
+      "transactions": "Income & expenses",
+      "goals": "Goals",
+      "login": "Login",
+      "register": "Register",
+      "logout": "Logout"
+    },
+    "languageButton": "English"
+  },
+  "language": {
+    "he": "Hebrew",
+    "en": "English"
+  },
+  "section": {
+    "title": "Goals",
+    "emptyText": "You don't have any saving goals yet",
+    "emptyCta": "Click to start saving"
+  }
+}

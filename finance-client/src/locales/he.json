@@ -1,0 +1,342 @@
+{
+    "meta": {
+        "title": "ניהול החשבון שלי"
+    },
+    "home": {
+        "hero": {
+            "title": "השליטה על הכסף – במקום אחד",
+            "subtitle": "עקוב אחרי הכנסות, הוצאות וחסכונות בלוח מחוונים נוח.",
+            "ctaRegister": "התחילי עכשיו",
+            "ctaLogin": "כבר רשומה? התחברי"
+        },
+                "kpi": {
+            "totalIncome": "סה\"כ הכנסות",
+            "totalExpense": "סה\"כ הוצאות",
+            "totalSavings": "סה\"כ חסכונות",
+            "halfYearAccum": "במצטבר לחצי שנה",
+            "savingsCaption": "הכנסות פחות הוצאות"
+        },
+        "months": {
+            "jan": "ינו",
+            "feb": "פבר",
+            "mar": "מרץ",
+            "apr": "אפר",
+            "may": "מאי",
+            "jun": "יונ"
+        },
+        "charts": {
+            "incomeVsExpenseTitle": "הכנסות מול הוצאות",
+            "incomeVsExpenseSubtitle": "התמונה החודשית שלך",
+            "savingsTrendTitle": "מגמת חיסכון",
+            "savingsTrendSubtitle": "כמה נשאר בסוף כל חודש",
+            "incomeLegend": "הכנסות",
+            "expenseLegend": "הוצאות",
+            "monthLabel": "הצג חודש:",
+            "monthPlaceholder": "בחר חודש",
+            "expenseByCategoryTitle": "התפלגות הוצאות לפי קטגוריות",
+            "noDataForMonth": "אין נתונים לחודש {{month}}",
+            "uncategorized": "לא מוגדר",
+            "categoriesError": "שגיאה בטעינת גרף קטגוריות"
+        }
+    },
+    "auth": {
+        "loginTitle": "התחברות",
+        "registerTitle": "ברוך הבא! בוא נתחיל",
+        "login": {
+            "subtitle": "הכנס את הפרטים שלך כדי לנהל את התקציב האישי",
+            "emailLabel": "אימייל",
+            "emailPlaceholder": "הקליד/י את כתובת האימייל שלך",
+            "passwordLabel": "סיסמה",
+            "passwordPlaceholder": "הקליד/י סיסמה",
+            "submit": "התחברות",
+            "submitting": "מתחבר...",
+            "noAccount": "אין לך חשבון? הרשמה",
+            "success": "התחברת בהצלחה!",
+            "invalidCredentials": "אימייל או סיסמה שגויים",
+            "userNotFound": "המשתמש לא קיים",
+            "serverError": "שגיאה בשרת, נסה שוב מאוחר יותר"
+        },
+        "register": {
+            "subtitle": "הזן את הפרטים האישיים שלך כדי להתחיל",
+            "firstNameLabel": "שם פרטי",
+            "firstNamePlaceholder": "שם פרטי",
+            "lastNameLabel": "שם משפחה",
+            "lastNamePlaceholder": "שם משפחה",
+            "emailLabel": "אימייל",
+            "emailPlaceholder": "אימייל",
+            "passwordLabel": "סיסמה",
+            "passwordPlaceholder": "סיסמה",
+            "submit": "הרשמה",
+            "submitting": "נרשם...",
+            "haveAccount": "כבר יש לך חשבון? התחבר כאן",
+            "success": "נרשמת בהצלחה!",
+            "emailExists": "כתובת האימייל כבר קיימת במערכת",
+            "serverError": "שגיאה בשרת, נסה שוב מאוחר יותר"
+        },
+    "messages": {
+      "login": {
+        "success": "התחברת בהצלחה!",
+        "invalidCredentials": "אימייל או סיסמה שגויים",
+        "userNotFound": "המשתמש לא קיים",
+        "serverError": "שגיאה בשרת, נסה שוב מאוחר יותר"
+      },
+      "register": {
+        "success": "נרשמת בהצלחה!",
+        "emailExists": "כתובת האימייל כבר קיימת במערכת",
+        "serverError": "שגיאה בשרת, נסה שוב מאוחר יותר"
+      }
+    }
+
+    },
+    "transactions": {
+        "dashboardTitle": "לוח המחוונים שלי",
+        "addNewAction": "+ הוסף פעולה חדשה",
+        "chartsTitle": "התפלגות הוצאות והכנסות בגרפים",
+        "kpi": {
+            "totalIncome": "סה\"כ הכנסות",
+            "totalExpense": "סה\"כ הוצאות",
+            "totalSavings": "סה\"כ חסכונות",
+            "halfYearAccum": "במצטבר לחצי שנה",
+            "savingsCaption": "הכנסות פחות הוצאות"
+        },
+        "form": {
+            "titleEdit": "ערוך פעולה",
+            "titleCreate": "הוסף פעולה",
+            "typeLabel": "סוג",
+            "typeOptions": {
+                "income": "הכנסה",
+                "expense": "הוצאה"
+            },
+            "typePlaceholder": "בחר סוג",
+            "amountLabel": "סכום",
+            "dateLabel": "תאריך",
+            "categoryLabel": "קטגוריה",
+            "categoryPlaceholder": "בחר קטגוריה",
+            "categoryRequired": "בחר קטגוריה לפני שמירה",
+            "submitEdit": "עדכן",
+            "submitCreate": "שמור"
+        },
+        "table": {
+            "title": "כל הפעולות שלי",
+            "noData": "אין נתונים להצגה",
+            "exportExcel": "ייצוא לאקסל",
+            "headers": {
+                "type": "סוג",
+                "amount": "סכום",
+                "date": "תאריך",
+                "category": "קטגוריה",
+                "actions": "פעולות"
+            },
+            "typeLabel": {
+                "income": "הכנסה",
+                "expense": "הוצאה"
+            },
+            "filters": {
+                "toggle": "פילטרים",
+                "typeLabel": "הצג רק:",
+                "typeAll": "הכל",
+                "typeIncome": "הכנסות",
+                "typeExpense": "הוצאות",
+                "categoryAll": "כל ההוצאות"
+            },
+            "actions": {
+                "edit": "ערוך",
+                "delete": "מחק"
+            }
+        },
+        "updateModal": {
+            "title": "עדכון פעולה",
+            "dateLabel": "תאריך:",
+            "sumLabel": "סכום:"
+        }
+    },
+    "charts": {
+        "transactions": {
+            "loadError": "שגיאה בטעינת תנועות",
+            "monthHeader": "חודש",
+            "incomeHeader": "הכנסות",
+            "expenseHeader": "הוצאות",
+            "pdfTitle": "דו\"ח חודשי לשנת {{year}}",
+            "excelSheetName": "סיכום חודשי",
+            "pdfFileName": "דו\"ח_חודשי_{{year}}",
+            "excelFileName": "דו\"ח_חודשי_{{year}}",
+            "yearLabel": "בחר שנה:",
+            "yearPlaceholder": "בחר שנה",
+            "monthlyTitle": "הכנסות והוצאות לפי חודשים ({{year}})",
+            "yearlyTitle": "סיכום שנתי כולל ({{year}})",
+            "yearlyTotalLabel": "סה\"כ שנתי",
+            "income": "הכנסות",
+            "expense": "הוצאות",
+            "exportExcel": "ייצוא ל Excel",
+            "exportPDF": "ייצוא ל PDF"
+        }
+    },
+    "profile": {
+        "loading": "טוען...",
+        "greeting": "שלום {{firstName}} {{lastName}}",
+        "firstNameLabel": "שם פרטי:",
+        "lastNameLabel": "שם משפחה:",
+        "emailLabel": "דוא\"ל:",
+        "changePasswordTitle": "שינוי סיסמה",
+        "oldPasswordLabel": "סיסמה ישנה:",
+        "newPasswordLabel": "סיסמה חדשה:",
+        "confirmPasswordLabel": "אשר סיסמה חדשה:",
+        "submitButton": "עדכון פרטים",
+        "passwordMismatch": "הסיסמאות החדשות לא תואמות!",
+        "updateSuccess": "פרטי המשתמש עודכנו בהצלחה!",
+        "updateError": "שגיאה בעדכון פרטי המשתמש"
+    },
+    "validation": {
+        "emailRequired": "אימייל חובה",
+        "emailInvalid": "האימייל לא תקין",
+        "passwordRequired": "סיסמה חובה",
+        "passwordMin": "הסיסמה חייבת להיות לפחות 6 תווים",
+        "firstNameRequired": "שם פרטי חובה",
+        "firstNameMin": "לפחות שתי אותיות",
+        "firstNameHebrewOnly": "בעברית בלבד",
+        "lastNameRequired": "שם משפחה חובה",
+        "lastNameMin": "לפחות שתי אותיות",
+        "lastNameHebrewOnly": "בעברית בלבד"
+    },
+    "autoSaving": {
+        "enable": "הפעל חיסכון אוטומטי",
+        "amountLabel": "סכום לחיסכון:",
+        "amountPlaceholder": "הקליד/י סכום",
+        "frequencyLabel": "תדירות:",
+        "frequencyPlaceholder": "בחר/י תדירות",
+        "weekly": "שבועי",
+        "monthly": "חודשי",
+        "yearly": "שנתי",
+        "unlimited": "ללא הגבלה",
+        "limited": "מספר קבוע של פעמים",
+        "paymentsCountLabel": "מספר תשלומים:"
+    },
+    "datePicker": {
+        "placeholder": "בחר תאריך",
+        "months": {
+            "0": "ינואר",
+            "1": "פברואר",
+            "2": "מרץ",
+            "3": "אפריל",
+            "4": "מאי",
+            "5": "יוני",
+            "6": "יולי",
+            "7": "אוגוסט",
+            "8": "ספטמבר",
+            "9": "אוקטובר",
+            "10": "נובמבר",
+            "11": "דצמבר"
+        },
+        "weekdaysShort": {
+            "sun": "א",
+            "mon": "ב",
+            "tue": "ג",
+            "wed": "ד",
+            "thu": "ה",
+            "fri": "ו",
+            "sat": "ש"
+        }
+    },
+    "financeSelect": {
+        "placeholder": "בחר אפשרות"
+    },
+    "goals": {
+        "section": {
+            "emptyText": "אין כרגע יעדים לחיסכון לחץ כדי להתחיל לחסוך"
+        },
+        "table": {
+            "headers": {
+                "name": "שם המטרה",
+                "targetAmount": "יעד (ש\"ח)",
+                "autoSaving": "הוספה אוטומטית",
+                "currentAmount": "נצבר (ש\"ח)",
+                "progress": "התקדמות",
+                "actions": "פעולות"
+            },
+            "actions": {
+                "edit": "ערוך",
+                "delete": "מחק",
+                "addAmount": "הוסף סכום"
+            },
+            "autoSavingTemplate": "כל {{frequency}} {{amount}}"
+
+        },
+        "autoSaving": {
+    "monthly": "חודש",
+    "weekly": "שבוע",
+    "daily": "יום"
+  },
+        "card": {
+            "chips": {
+                "target": "יעד",
+                "saved": "נצבר",
+                "auto": "אוטומטי"
+            },
+            "aria": {
+                "edit": "ערוך {{title}}",
+                "delete": "מחק {{title}}",
+                "addAmount": "הוסף סכום ל{{title}}"
+            }
+        },
+        "form": {
+            "editTitle": "עריכת יעד חיסכון",
+            "createTitle": "הוספת יעד חיסכון חדש",
+            "nameLabel": "שם היעד",
+            "namePlaceholder": "לדוגמה: חופשה / רכב חדש",
+            "targetAmountLabel": "סכום יעד",
+            "targetAmountPlaceholder": "לדוגמה: 5000",
+            "autoSavingLabel": "הוספה אוטומטית ליעד",
+            "saveButton": "שמירה",
+            "autoSavingError": "יש למלא סכום ותדירות להוספה אוטומטית",
+            "saveError": "שגיאה בשמירת יעד"
+        },
+        "page": {
+            "title": "ניהול יעדי חיסכון",
+            "subtitle": "כאן תוכל לעקוב, לערוך ולנהל את היעדים האישיים שלך בצורה מסודרת ונוחה.",
+            "addNewButton": "הוסף יעד חדש",
+            "loading": "טוען יעדים...",
+            "errorFallback": "שגיאה בטעינת יעדים",
+            "listTitle": "הרשימה שלך",
+            "deleteConfirm": "בטוח שברצונך למחוק את היעד?",
+            "deleteError": "שגיאה במחיקת היעד",
+            "addAmountInvalid": "יש להכניס סכום תקין",
+            "addAmountError": "שגיאה בהוספת סכום"
+        }
+    },
+    
+    "pagination": {
+    "prev": "הקודם",
+    "next": "הבא",
+    "pageOf": "עמוד {{page}} מתוך {{total}}"
+  },
+    "common": {
+        "cancel": "ביטול",
+        "save": "שמור",
+        "loading": "טוען..."
+    },
+    "balance": {
+        "dateLabel": "חישוב יתרה לפי תאריך:",
+        "positiveLabel": "יתרה חיובית:",
+        "negativeLabel": "יתרה שלילית:"
+    },
+    "layout": {
+        "nav": {
+            "transactions": "הכנסות והוצאות",
+            "goals": "יעדים",
+            "login": "כניסה",
+            "register": "הרשמה",
+            "logout": "התנתקות"
+        },
+        "languageButton": "אנגלית"
+    },
+    "language": {
+        "he": "עברית",
+        "en": "English"
+    },
+    "section": {
+  "title": "יעדים",
+  "emptyText": "אין כרגע יעדים לחיסכון",
+  "emptyCta": "לחצי כדי להתחיל לחסוך"
+}
+
+}

@@ -1,0 +1,73 @@
+.finance-date-picker {
+  position: relative;
+  width: 100%;
+  font-size: 16px;
+  color: var(--text);
+  direction: rtl;
+
+  .finance-selected {
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 12px;
+    background: rgba(255,255,255,.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover { border-color: var(--brand); }
+
+    .arrow { transition: 0.2s; &.open { transform: rotate(180deg); } }
+  }
+
+  .calendar-popup {
+    position: absolute;
+    top: 100%;
+    margin-top: 6px;
+    background: var(--panel);
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 12px;
+    z-index: 10;
+    padding: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.25);
+    width: 280px;
+
+    .calendar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      span { font-weight: 600; color: var(--brand); }
+      button {
+        border: none;
+        background: transparent;
+        color: var(--text);
+        cursor: pointer;
+        font-size: 16px;
+        &:hover { color: var(--brand); }
+      }
+    }
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 4px;
+
+      .calendar-day-header {
+        text-align: center;
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .calendar-day {
+        text-align: center;
+        padding: 6px 0;
+        border-radius: 8px;
+        cursor: pointer;
+
+        &:hover { background: rgba(76,196,255,.1); }
+        &.selected { background: var(--brand); color: #06121a; font-weight: 700; }
+      }
+    }
+  }
+}

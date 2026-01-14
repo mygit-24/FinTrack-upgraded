@@ -1,0 +1,62 @@
+@import '../../../styles/mixin.scss';
+
+
+
+.chart {
+    min-width: 45%;
+}
+
+@include respond-min('desktop') {
+    .year-select {
+        margin-bottom: 1rem;
+        text-align: right;
+        max-width: 20%;
+
+        label {
+            margin-right: 8px;
+            font-weight: 600;
+        }
+    }
+
+    .charts-container {
+        display: flex;
+        justify-content: center;
+        gap: 1rem
+    }
+}
+    .export-container {
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: left;
+        gap: 1rem;
+        margin-left: 1rem;
+    }
+
+.currenet-month {
+    color: var(--text);
+    font-size: 1.2rem;
+}
+
+.no-data {
+    text-align: center;
+    color: var(--brand);
+}
+
+.expense-category-chart {
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+}
+
+@include respond('mobile') {
+
+
+    .chart {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .expense-category-chart {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
