@@ -2,6 +2,7 @@
     "meta": {
         "title": "ניהול החשבון שלי"
     },
+
     "home": {
         "hero": {
             "title": "השליטה על הכסף – במקום אחד",
@@ -92,6 +93,18 @@
         "dashboardTitle": "לוח המחוונים שלי",
         "addNewAction": "+ הוסף פעולה חדשה",
         "chartsTitle": "התפלגות הוצאות והכנסות בגרפים",
+        "categories": {
+      "food": "אוכל",
+      "transport": "תחבורה",
+      "bills": "חשבונות",
+      "shopping": "קניות",
+      "home_design": "עיצוב הבית",
+      "health": "בריאות",
+      "education": "חינוך",
+      "entertainment": "בידור",
+      "gifts": "מתנות",
+      "others": "אחר"
+    },
         "kpi": {
             "totalIncome": "סה\"כ הכנסות",
             "totalExpense": "סה\"כ הוצאות",
@@ -151,6 +164,19 @@
         }
     },
     "charts": {
+        
+            "incomeVsExpenseTitle": "הכנסות מול הוצאות",
+            "incomeVsExpenseSubtitle": "התמונה החודשית שלך",
+            "savingsTrendTitle": "מגמת חיסכון",
+            "savingsTrendSubtitle": "כמה נשאר בסוף כל חודש",
+            "incomeLegend": "הכנסות",
+            "expenseLegend": "הוצאות",
+            "monthLabel": "הצג חודש:",
+            "monthPlaceholder": "בחר חודש",
+            "expenseByCategoryTitle": "התפלגות הוצאות לפי קטגוריות",
+            "noDataForMonth": "אין נתונים לחודש {{month}}",
+            "uncategorized": "לא מוגדר",
+            "categoriesError": "שגיאה בטעינת גרף קטגוריות",
         "transactions": {
             "loadError": "שגיאה בטעינת תנועות",
             "monthHeader": "חודש",

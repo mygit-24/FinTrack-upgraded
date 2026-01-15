@@ -1,51 +1,45 @@
 // services/transactions.service.js
-const transactionsRepository = require("../repositories/transactions.repository");
-const categories = require("../constants/expenseCategories");
+const Transaction = require("../models/Transaction");
+// שימי לב: אין כאן require ל-expenseCategories
 
-// פונקציה פנימית להוספת categoryLabel לטרנזקציה
-function attachCategoryLabel(tx) {
-  const plain = tx.toObject ? tx.toObject() : tx;
-
-  if (plain.type === "expense") {
-    const categoryLabel =
-      categories.find((c) => c.value === plain.category)?.label || "-";
-
-    return { ...plain, categoryLabel };
-  }
-
-  return { ...plain, categoryLabel: "-" };
-}
-
-// יצירת טרנזקציה חדשה למשתמש
-async function createTransactionForUser(userId, payload) {
-  const data = {
-    ...payload,
+async function createTransactionForUser(userId, data) {
+  const tx = await Transaction.create({
+    ...data,
     user: userId,
-  };
-
-  const tx = await transactionsRepository.create(data);
-  return attachCategoryLabel(tx);
+  });
+  return tx.toObject();
 }
 
-// שליפת כל הטרנזקציות של משתמש (עם categoryLabel)
 async function getUserTransactions(userId) {
-  const transactions = await transactionsRepository.findByUser(userId);
-  return transactions.map(attachCategoryLabel);
+  const docs = await Transaction.find({ user: userId }).sort({ date: -1 });
+
+  // אופציה 1 – להחזיר פשוט את המסמכים כמו שהם:
+  return docs.map(tx => tx.toObject());
+
+  // אם את רוצה להדגיש שזה מפתח, אפשר גם ככה:
+  /*
+  return docs.map(tx => ({
+    ...tx.toObject(),
+    categoryKey: tx.category, // מפתח בלבד – הטקסט מתורגם ב־React
+  }));
+  */
 }
 
-// עדכון טרנזקציה של משתמש
-async function updateUserTransaction(userId, id, payload) {
-  const updated = await transactionsRepository.updateByIdAndUser(id, userId, payload);
-  if (!updated) {
-    return null; // הקונטרולר יחליט מה להחזיר
-  }
-  return attachCategoryLabel(updated);
+async function updateUserTransaction(userId, id, data) {
+  const updated = await Transaction.findOneAndUpdate(
+    { _id: id, user: userId },
+    data,
+    { new: true }
+  );
+  return updated ? updated.toObject() : null;
 }
 
-// מחיקת טרנזקציה של משתמש
 async function deleteUserTransaction(userId, id) {
-  const deleted = await transactionsRepository.deleteByIdAndUser(id, userId);
-  return deleted; // null אם לא נמצא
+  const deleted = await Transaction.findOneAndDelete({
+    _id: id,
+    user: userId,
+  });
+  return deleted;
 }
 
 module.exports = {

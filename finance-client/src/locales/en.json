@@ -16,6 +16,40 @@
       "halfYearAccum": "Accumulated over 6 months",
       "savingsCaption": "Income minus expenses"
     }
+   
+  },
+   "charts": {
+    "incomeVsExpenseTitle": "Income vs expenses",
+    "incomeVsExpenseSubtitle": "Your monthly picture",
+    "savingsTrendTitle": "Savings trend",
+    "savingsTrendSubtitle": "How much is left at the end of each month",
+    "incomeLegend": "Income",
+    "expenseLegend": "Expenses",
+    "monthLabel": "Show month:",
+    "monthPlaceholder": "Select month",
+    "expenseByCategoryTitle": "Expenses by category",
+    "noDataForMonth": "No data for {{month}}",
+    "uncategorized": "Uncategorized",
+    "categoriesError": "Error loading categories chart",
+    "transactions": {
+      "loadError": "Error loading transactions",
+      "monthHeader": "Month",
+      "incomeHeader": "Income",
+      "expenseHeader": "Expenses",
+      "pdfTitle": "Monthly report for {{year}}",
+      "excelSheetName": "Monthly summary",
+      "pdfFileName": "monthly_report_{{year}}",
+      "excelFileName": "monthly_report_{{year}}",
+      "yearLabel": "Select year:",
+      "yearPlaceholder": "Select year",
+      "monthlyTitle": "Income and expenses by month ({{year}})",
+      "yearlyTitle": "Yearly summary ({{year}})",
+      "yearlyTotalLabel": "Yearly total",
+      "income": "Income",
+      "expense": "Expenses",
+      "exportExcel": "Export to Excel",
+      "exportPDF": "Export to PDF"
+    }
   },
   "auth": {
     "loginTitle": "Login",
@@ -70,6 +104,18 @@
   "transactions": {
     "dashboardTitle": "My dashboard",
     "addNewAction": "+ Add new transaction",
+      "categories": {
+      "food": "Food",
+      "transport": "Transport",
+      "bills": "Bills",
+      "shopping": "Shopping",
+      "home_design": "Home design",
+      "health": "Health",
+      "education": "Education",
+      "entertainment": "Entertainment",
+      "gifts": "Gifts",
+      "others": "Other"
+    },
  
        "kpi": {
       "totalIncome": "Total income",
@@ -130,39 +176,7 @@
       "sumLabel": "Amount:"
     }
   },
-  "charts": {
-    "incomeVsExpenseTitle": "Income vs expenses",
-    "incomeVsExpenseSubtitle": "Your monthly picture",
-    "savingsTrendTitle": "Savings trend",
-    "savingsTrendSubtitle": "How much is left at the end of each month",
-    "incomeLegend": "Income",
-    "expenseLegend": "Expenses",
-    "monthLabel": "Show month:",
-    "monthPlaceholder": "Select month",
-    "expenseByCategoryTitle": "Expenses by category",
-    "noDataForMonth": "No data for {{month}}",
-    "uncategorized": "Uncategorized",
-    "categoriesError": "Error loading categories chart",
-    "transactions": {
-      "loadError": "Error loading transactions",
-      "monthHeader": "Month",
-      "incomeHeader": "Income",
-      "expenseHeader": "Expenses",
-      "pdfTitle": "Monthly report for {{year}}",
-      "excelSheetName": "Monthly summary",
-      "pdfFileName": "monthly_report_{{year}}",
-      "excelFileName": "monthly_report_{{year}}",
-      "yearLabel": "Select year:",
-      "yearPlaceholder": "Select year",
-      "monthlyTitle": "Income and expenses by month ({{year}})",
-      "yearlyTitle": "Yearly summary ({{year}})",
-      "yearlyTotalLabel": "Yearly total",
-      "income": "Income",
-      "expense": "Expenses",
-      "exportExcel": "Export to Excel",
-      "exportPDF": "Export to PDF"
-    }
-  },
+  
   "months": {
     "jan": "Jan",
     "feb": "Feb",

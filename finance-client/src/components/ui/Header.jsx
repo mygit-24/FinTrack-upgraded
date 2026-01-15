@@ -53,7 +53,7 @@ export default function Header() {
                 </Link>
                 <LanguageSwitcher >
                   {t('layout.languageButton')}
-                </LanguageSwitcher >  {/* הוספת כפתור שינוי השפה */}
+                </LanguageSwitcher > 
             
                 <button className="btn btn-primary" onClick={handleLogout}>
                   {t('layout.nav.logout')}
@@ -61,7 +61,6 @@ export default function Header() {
               </>
             ) : (
               <>
-              <button></button>
                 <Link to="/login" className="btn btn-ghost">
                    {t('layout.nav.login')}
                 </Link>

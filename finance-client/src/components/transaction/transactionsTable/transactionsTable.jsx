@@ -8,12 +8,17 @@ import { useTranslation } from 'react-i18next';
 
 const PAGE_SIZE = 10;
 
-const exportToExcel = (transactions) => {
-  const filteredData = transactions.map(({ _id, type, sum, date, categoryLabel }) => ({
-    Type: type,
+// 👇 מעודכן: מקבל גם t ומשתמש ב-category
+const exportToExcel = (transactions, t) => {
+  const filteredData = transactions.map(({ _id, type, sum, date, category }) => ({
+    Type: type === 'income'
+      ? t('transactions.table.typeLabel.income')
+      : t('transactions.table.typeLabel.expense'),
     Sum: sum,
     Date: date ? date.slice(0, 10) : '',
-    Category: categoryLabel || '-',
+    Category: category
+      ? t(`transactions.categories.${category}`)
+      : '-',
   }));
 
   const worksheet = XLSX.utils.json_to_sheet(filteredData);
@@ -39,23 +44,28 @@ const TransactionsTable = ({ transactions, onDelete, onEdit }) => {
     expense: t('transactions.table.typeLabel.expense'),
   };
 
-  // בניית רשימת קטגוריות להוצאות
+  // 👇 מעודכן: בניית רשימת קטגוריות להוצאות עם i18n
   useEffect(() => {
     if (typeFilter === 'expense') {
       const categoriesWithValue = Array.from(
-        new Set(transactions.filter(tx => tx.type === 'expense').map(tx => tx.category))
-      ).map(value => {
-        const txExample = transactions.find(tx => tx.category === value);
-        return { value, label: txExample.categoryLabel || value };
-      });
+        new Set(
+          transactions
+            .filter(tx => tx.type === 'expense')
+            .map(tx => tx.category)
+        )
+      ).map(value => ({
+        value,
+        label: t(`transactions.categories.${value}`),
+      }));
+
       setExpenseCategories(categoriesWithValue);
     } else {
       setExpenseCategories([]);
       setCategoryFilter('');
     }
-  }, [typeFilter, transactions]);
+  }, [typeFilter, transactions, t]);
 
-   // סינון לפי סוג + קטגוריה
+  // סינון לפי סוג + קטגוריה
   const filteredTransactions = transactions.filter(tx => {
     if (typeFilter && tx.type !== typeFilter) return false;
     if (typeFilter === 'expense' && categoryFilter && tx.category !== categoryFilter) return false;
@@ -71,9 +81,7 @@ const TransactionsTable = ({ transactions, onDelete, onEdit }) => {
   const startIndex = (page - 1) * PAGE_SIZE;
   const pageTransactions = filteredTransactions.slice(startIndex, startIndex + PAGE_SIZE);
 
-
   return (
-
     <div className="transactions-table-container">
       {/* טבלת טרנזקציות */}
       <h2 className="title mt-4">{t('transactions.table.title')}</h2>
@@ -85,6 +93,7 @@ const TransactionsTable = ({ transactions, onDelete, onEdit }) => {
       >
         <Sliders size={20} /> {t('transactions.table.filters.toggle')}
       </button>
+
       {showFilters && (
         <div className="filters-panel">
           {/* סינון לפי סוג */}
@@ -95,7 +104,6 @@ const TransactionsTable = ({ transactions, onDelete, onEdit }) => {
               value={typeFilter}
               onChange={(val) => setTypeFilter(val)}
               options={[
-                // היו: 'הכל','הכנסות','הוצאות'
                 { value: '', label: t('transactions.table.filters.typeAll') },
                 { value: 'income', label: t('transactions.table.filters.typeIncome') },
                 { value: 'expense', label: t('transactions.table.filters.typeExpense') },
@@ -119,6 +127,7 @@ const TransactionsTable = ({ transactions, onDelete, onEdit }) => {
           )}
         </div>
       )}
+
       {filteredTransactions.length === 0 ? (
         <div className="no-data-message">
           <p>{t('transactions.table.noData')}</p>
@@ -145,10 +154,15 @@ const TransactionsTable = ({ transactions, onDelete, onEdit }) => {
                 <td>₪{tx.sum}</td>
                 <td>
                   {tx.date
-                    ? new Date(tx.date).toLocaleDateString('he-IL') // יום/חודש/שנה
+                    ? new Date(tx.date).toLocaleDateString('he-IL') // אפשר להשאיר ככה, גם באנגלית
                     : ''}
                 </td>
-                <td>{tx.categoryLabel}</td>
+                {/* 👇 מעודכן: אין יותר categoryLabel, משתמשים ב־category + i18n */}
+                <td>
+                  {tx.type === 'expense'
+                    ? t(`transactions.categories.${tx.category}`)
+                    : '-'}
+                </td>
                 <td className="actions">
                   <button
                     onClick={() => onEdit(tx)}
@@ -170,40 +184,42 @@ const TransactionsTable = ({ transactions, onDelete, onEdit }) => {
           </tbody>
         </table>
       )}
+
       <div className="table-pagination">
         <button
           type="button"
           className="table-pagination__btn"
           disabled={page === totalPages}
           onClick={() => setPage(p => p + 1)}
-          aria-label= {t('pagination.next')}
+          aria-label={t('pagination.next')}
         >
-               <ChevronLeft className="table-pagination__icon" />
-            </button>
+          <ChevronLeft className="table-pagination__icon" />
+        </button>
+
         <span className="table-pagination__info">
           {page}/{totalPages}
         </span>
-        
-<button
-        type="button"
-        className="table-pagination__btn"
-        disabled={page === 1}
-        onClick={() => setPage(p => p - 1)}
-        aria-label={t('pagination.prev')}
+
+        <button
+          type="button"
+          className="table-pagination__btn"
+          disabled={page === 1}
+          onClick={() => setPage(p => p - 1)}
+          aria-label={t('pagination.prev')}
         >
-           <ChevronRight className="table-pagination__icon" />
+          <ChevronRight className="table-pagination__icon" />
         </button>
-        
       </div>
+
       <div className='export-container'>
         <button
-          onClick={() => exportToExcel(filteredTransactions)}
-          className="btn btn-primary export-btn">
+          onClick={() => exportToExcel(filteredTransactions, t)}
+          className="btn btn-primary export-btn"
+        >
           <Download size={16} />
           {t('transactions.table.exportExcel')}
         </button>
       </div>
-
     </div>
   );
 };

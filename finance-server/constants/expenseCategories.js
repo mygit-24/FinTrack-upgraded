@@ -1,13 +1,14 @@
 // module.exports = ['food', 'transport', 'bills', 'shopping', 'others', 'home design'];
+// constants/expenseCategories.js
 module.exports = [
-    { value: 'food', label: 'אוכל' },
-    { value: 'transport', label: 'תחבורה' },
-    { value: 'bills', label: 'חשבונות' },
-    { value: 'shopping', label: 'קניות' },
-    { value: 'home_design', label: 'עיצוב הבית' },
-    { value: 'health', label: 'בריאות' },
-    { value: 'education', label: 'חינוך' },
-    { value: 'entertainment', label: 'בידור' },
-    { value: 'gifts', label: 'מתנות' },
-    { value: 'others', label: 'אחר' }
+  'food',
+  'transport',
+  'bills',
+  'shopping',
+  'home_design',
+  'health',
+  'education',
+  'entertainment',
+  'gifts',
+  'others',
 ];
