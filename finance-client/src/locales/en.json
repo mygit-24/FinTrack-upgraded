@@ -15,7 +15,22 @@
       "totalSavings": "Total savings",
       "halfYearAccum": "Accumulated over 6 months",
       "savingsCaption": "Income minus expenses"
+    },
+    "charts": {
+        "incomeVsExpenseTitle": "Income vs expenses",
+    "incomeVsExpenseSubtitle": "Your monthly picture",
+    "savingsTrendTitle": "Savings trend",
+    "savingsTrendSubtitle": "How much is left at the end of each month",
+    "incomeLegend": "Income",
+    "expenseLegend": "Expenses",
+    "monthLabel": "Show month:",
+    "monthPlaceholder": "Select month",
+    "expenseByCategoryTitle": "Expenses by category",
+    "noDataForMonth": "No data for {{month}}",
+    "uncategorized": "Uncategorized",
+    "categoriesError": "Error loading categories chart"
     }
+      
    
   },
    "charts": {

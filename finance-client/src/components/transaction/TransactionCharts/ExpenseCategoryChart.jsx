@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import {
   PieChart, Pie, Tooltip, Cell, ResponsiveContainer, Label
 } from 'recharts';
-import { getAllTransactions, getExpenseCategories } from 'api/transactionApi';
+import { getAllTransactions } from 'api/transactionApi';
+// import { getAllTransactions, getExpenseCategories } from 'api/transactionApi';
 import FinanceSelect from "components/common/FinanceSelect/FinanceSelect";
 import './Charts.scss';
 import { useTranslation } from 'react-i18next';
@@ -53,28 +54,27 @@ function generatePastMonths(count) {
 const ExpenseCategoryChart = () => {
   const [data, setData] = useState([]);
   const [selectedMonth, setSelectedMonth] = useState(getCurrentMonth());
-  const [categoriesMap, setCategoriesMap] = useState({}); // map value -> label
-  const { t } = useTranslation();
+  // const [categoriesMap, setCategoriesMap] = useState({}); // map value -> label
+  const { t, i18n } = useTranslation();
  
 
 
-  useEffect(() => {
-    // מביא את רשימת הקטגוריות עם label
-    getExpenseCategories().then(res => {
-      const map = res.data.reduce((acc, cat) => {
-        acc[cat.value] = cat.label;
-        return acc;
-      }, {});
-      setCategoriesMap(map);
-    }).catch(err => console.error(t('charts.categoriesError'),err));
-  }, []);
+  // useEffect(() => {
+  //   // מביא את רשימת הקטגוריות עם label
+  //   getExpenseCategories().then(res => {
+  //     const map = res.data.reduce((acc, cat) => {
+  //       acc[cat.value] = cat.label;
+  //       return acc;
+  //     }, {});
+  //     setCategoriesMap(map);
+  //   }).catch(err => console.error(t('charts.categoriesError'),err));
+  // }, []);
 
   useEffect(() => {
     fetchCategoryData();
-  }, [selectedMonth, categoriesMap]);
+  }, [selectedMonth, i18n.language]);
 
   const fetchCategoryData = async () => {
-    if (!categoriesMap) return;
     try {
       const { startDate, endDate } = getMonthDateRange(selectedMonth);
       const res = await getAllTransactions();
@@ -89,14 +89,20 @@ const ExpenseCategoryChart = () => {
         );
       });
 
-      const grouped = expenses.reduce((acc, tx) => {
-        const label = categoriesMap[tx.category] || t('charts.uncategorized');
-        acc[label] = (acc[label] || 0) + Number(tx.sum);
-        return acc;
-      }, {});
+      // const grouped = expenses.reduce((acc, tx) => {
+      //   const label = categoriesMap[tx.category] || t('charts.uncategorized');
+      //   acc[label] = (acc[label] || 0) + Number(tx.sum);
+      //   return acc;
+      // }, {});
+
+ const grouped = expenses.reduce((acc, tx) => {
+      const key = tx.category || 'uncategorized';
+      acc[key] = (acc[key] || 0) + Number(tx.sum);
+      return acc;
+    }, {});
 
       const chartData = Object.keys(grouped).map(key => ({
-        name: key,
+        name: t(`transactions.categories.${key}`),
         value: grouped[key],
       }));
 

@@ -39,6 +39,8 @@ const TransactionsTable = ({ transactions, onDelete, onEdit }) => {
 
   const { t } = useTranslation();
 
+
+
   const typeLabels = {
     income: t('transactions.table.typeLabel.income'),
     expense: t('transactions.table.typeLabel.expense'),
@@ -145,7 +147,8 @@ const TransactionsTable = ({ transactions, onDelete, onEdit }) => {
           </thead>
           <tbody>
             {pageTransactions.map(tx => (
-              <tr key={tx._id}>
+              
+    <tr key={tx._id}>
                 <td>
                   <span className={`tag ${tx.type}`}>
                     {typeLabels[tx.type] || tx.type}
@@ -180,9 +183,12 @@ const TransactionsTable = ({ transactions, onDelete, onEdit }) => {
                   </button>
                 </td>
               </tr>
+
             ))}
+            
           </tbody>
         </table>
+        
       )}
 
       <div className="table-pagination">
